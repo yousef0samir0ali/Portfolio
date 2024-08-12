@@ -1,0 +1,113 @@
+.contact h1 {
+    font-size: 2.1rem;
+    color: var(--title-color);
+    margin-bottom: 1rem;
+}
+
+.contact h1 .icon-envelope {
+    color: var(--subtitle-color);
+    margin-right: 2rem;
+    font-size: 1.8rem;
+}
+
+.contact p {
+    color: var(--subtitle-color);
+    margin-bottom: 2rem;
+    line-height: 1.65rem;
+}
+
+/* Start Form  */
+.contact form .form-control.flex {
+    margin-bottom: 2rem;
+}
+
+.contact form label {
+    color: var(--subtitle-color);
+}
+
+.contact form input,
+.contact form textarea {
+    margin-left: 1rem;
+    width: 18rem;
+    outline: none;
+    border: 1px solid rgb(63 63 70);
+    border-radius: 5px;
+    background-color: rgba(63, 63, 70, 0.15);
+    transition: .3s;
+    color: var(--title-color);
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+}
+
+.contact form input:hover,
+.contact form textarea:hover {
+    border: 1px solid rgb(45, 212, 191);
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border: 1px solid rgb(45, 212, 191);
+}
+
+.contact form input {
+    padding: 8px 10px;
+}
+
+.contact form textarea {
+    min-height: 10rem;
+}
+
+.contact form button {
+    background-color: rgba(36, 37, 46, 1);
+    color: var(--title-color);
+    padding: 0.75rem 2rem;
+    border: 1px solid rgb(63 63 70);
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+.contact form button:hover {
+    scale: 0.97;
+}
+
+/* End Form  */
+
+/* Start Animation  */
+
+
+/* End Animation  */
+
+/* Sart Media  */
+@media(max-width:575px) {
+    .contact form {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .contact form .form-control.flex {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        margin-left: 0;
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+
+    .contact form button {
+        width: 30%;
+        align-self: center;
+    }
+
+    .contact .animation {
+        display: none;
+    }
+}
+
+/* End Media  */

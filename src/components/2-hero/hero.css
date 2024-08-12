@@ -1,0 +1,65 @@
+section.hero {
+    margin-top: 3rem;
+}
+
+/* Start Left-Section  */
+section.hero .left-section {
+    flex-grow: 1;
+}
+
+.hero .parent-avatar.flex {
+    align-items: end;
+    gap: .6rem;
+}
+
+.hero .avatar {
+    width: 90px;
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    padding: 1px;
+}
+
+.hero .icon-verified {
+    color: var(--blue);
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+    font-size: 2.85rem;
+    line-height: 3.3rem;
+    margin: 24px 0;
+    color: var(--title-color);
+}
+
+.hero p {
+    color: var(--subtitle-color);
+    font-size: 0.9rem;
+    line-height: 1.65rem;
+    margin-bottom: 24px;
+}
+
+.hero .icons.flex {
+    gap: 2.5rem;
+    font-size: 1.3rem;
+    color: var(--subtitle-color);
+}
+
+.hero .icons.flex .icon {
+    position: relative;
+}
+
+.hero .icons.flex .icon>span {
+    position: absolute;
+}
+
+.hero .icons.flex .icon:hover {
+    font-size: 1.4rem;
+    transition: .3s;
+    cursor: pointer;
+    color: var(--icon-hover);
+}
+
+/* End Left-Section  */
+/* Start Right-Section  */
+/* End Right-Section  */
