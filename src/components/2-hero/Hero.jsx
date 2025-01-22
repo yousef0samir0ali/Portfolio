@@ -111,7 +111,11 @@ export default function Hero() {
           </a>
         </div>
         <AnimatedSection>
-          <a className="download-cv" href="/ycv.pdf" download={"Yousef_CV"}>
+          <a
+            className="download-cv"
+            href="/Yousef_Ali_Resume.pdf"
+            download={"Yousef_Ali_Resume"}
+          >
             Download CV
           </a>
         </AnimatedSection>
