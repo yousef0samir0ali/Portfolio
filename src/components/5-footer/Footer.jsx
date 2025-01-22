@@ -19,7 +19,7 @@ export default function Footer() {
         </li>
       </ul>
       <p>
-        &copy; 2023 <span>Eng.Yousef Ali</span>. All rights reserved.
+        Designed and developed by <span>Eng.Yousef Ali</span> &copy; 2023
       </p>
     </footer>
   );

@@ -10,6 +10,7 @@ section.hero .left-section {
 .hero .parent-avatar.flex {
     align-items: end;
     gap: .6rem;
+    min-height: 90px;
 }
 
 .hero .avatar {
@@ -25,11 +26,24 @@ section.hero .left-section {
     margin-bottom: 0.5rem;
 }
 
-.hero h1 {
-    font-size: 2.85rem;
-    line-height: 3.3rem;
+.hero .intro {
     margin: 24px 0;
     color: var(--title-color);
+}
+
+.hero .intro h1 {
+    font-size: 40px;
+    margin: 3px 0;
+    line-height: 3.3rem;
+}
+
+.hero .intro h3 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.hero .intro h3 span {
+    color: var(--blue);
 }
 
 .hero p {
@@ -41,25 +55,77 @@ section.hero .left-section {
 
 .hero .icons.flex {
     gap: 2.5rem;
+}
+
+.hero .icons.flex span {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(36, 37, 46, 1);
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid transparent;
     font-size: 1.3rem;
-    color: var(--subtitle-color);
 }
 
-.hero .icons.flex .icon {
-    position: relative;
-}
-
-.hero .icons.flex .icon>span {
-    position: absolute;
-}
-
-.hero .icons.flex .icon:hover {
-    font-size: 1.4rem;
+.hero .icons.flex span:hover {
+    border: 1px solid var(--blue);
     transition: .3s;
     cursor: pointer;
-    color: var(--icon-hover);
+    font-size: 1.5rem;
+}
+
+.hero .download-cv {
+    background-color: rgba(36, 37, 46, 1);
+    margin-top: 24px;
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 1.05rem;
+    opacity: 0.8;
+
+}
+
+.hero .download-cv:hover {
+    border: 1px solid var(--blue);
+    opacity: 1;
 }
 
 /* End Left-Section  */
+
 /* Start Right-Section  */
+.hero .animation {
+    transform: translate(70px, 40px);
+}
+
 /* End Right-Section  */
+/* Strt Media  */
+@media(max-width:991px) {
+    .hero .animation {
+
+        display: none;
+    }
+}
+
+@media(max-width:575px) {
+    .hero .intro h1 {
+        font-size: 35px;
+    }
+
+    .hero .intro h3 {
+        font-size: 20px;
+
+    }
+
+    .hero .icons.flex {
+        gap: 1.5rem;
+    }
+
+    .hero .icons.flex span {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* End Media  */
