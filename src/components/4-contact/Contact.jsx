@@ -1,10 +1,13 @@
 import { useForm, ValidationError } from "@formspree/react";
-import Lottie from "lottie-react";
 import doneAnimation from "../../animation/done.json";
 import emailAnimation from "../../animation/contact.json";
 import "./contact.css";
 import { useEffect, useState } from "react";
 import { AnimatedSection } from "../../animation/animation";
+
+import React, { Suspense } from "react";
+import Loading from "../../components/loading/Loading";
+const Lottie = React.lazy(() => import("lottie-react"));
 
 export default function Contact() {
   const [ok, setOk] = useState(false);
@@ -37,36 +40,58 @@ export default function Contact() {
           <div className="flex">
             <span className="icon-envelope flex"></span>
             <h3>Email</h3>
-            <a href="mailto: yosf.samir.ali@gmail.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="mailto: yosf.samir.ali@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               yosf.samir.ali@gmail.com
             </a>
           </div>
           <div className="flex">
             <span className="icon-phone flex"></span>
             <h3>Phone</h3>
-            <a href="tel:+963 997 705 460" target="_blank" rel="noopener noreferrer">
+            <a
+              href="tel:+963 997 705 460"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               +963 997 705 460
             </a>
           </div>
         </div>
       </AnimatedSection>
       <AnimatedSection>
-        <p>Contact us for more information and Get notified when I publish something new:</p>
+        <p>
+          Contact us for more information and Get notified when I publish
+          something new:
+        </p>
       </AnimatedSection>
-      <div style={{ justifyContent: "space-between", alignItems: "flex-end" }} className="flex">
+      <div
+        style={{ justifyContent: "space-between", alignItems: "flex-end" }}
+        className="flex"
+      >
         <form onSubmit={handleSubmit}>
           <AnimatedSection>
             <div className="form-control flex">
               <label htmlFor="email">Email Address:</label>
               <input type="email" name="email" id="email" required />
-              <ValidationError prefix="Email" field="email" errors={state.errors} />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
             </div>
           </AnimatedSection>
           <AnimatedSection>
             <div className="form-control flex">
               <label htmlFor="message">Your Message:</label>
               <textarea name="message" id="message" required></textarea>
-              <ValidationError prefix="Message" field="message" errors={state.errors} />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
             </div>
           </AnimatedSection>
           <AnimatedSection>
@@ -78,7 +103,18 @@ export default function Contact() {
             <div className="sent flex">
               <div className="content">
                 <p>
-                  <Lottie style={{ position: "absolute", height: 40, backgroundColor: "transparent", left: -30, top: -8 }} animationData={doneAnimation} />
+                  <Suspense fallback={<Loading />}>
+                    <Lottie
+                      style={{
+                        position: "absolute",
+                        height: 40,
+                        backgroundColor: "transparent",
+                        left: -30,
+                        top: -8,
+                      }}
+                      animationData={doneAnimation}
+                    />
+                  </Suspense>
                   Thanks for you ! Your message has been sent successfully.
                 </p>
                 <button
@@ -96,7 +132,9 @@ export default function Contact() {
           )}
         </form>
         <div className="animation">
-          <Lottie style={{ height: 400 }} animationData={emailAnimation} />
+          <Suspense fallback={<Loading />}>
+            <Lottie style={{ height: 400 }} animationData={emailAnimation} />
+          </Suspense>
         </div>
       </div>
     </section>

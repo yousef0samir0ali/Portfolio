@@ -1,14 +1,18 @@
 import "./hero.css";
-import Lottie from "lottie-react";
 import labtopAnimation from "../../animation/labtop1.json";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Typed from "typed.js";
 import { AnimatedSection } from "../../animation/animation";
 
+import React, { Suspense } from "react";
+import Loading from "../../components/loading/Loading";
+const Lottie = React.lazy(() => import("lottie-react"));
+
 export default function Hero() {
   const lottieRef = useRef();
   const typedElement = useRef();
+
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
       strings: ["FrontEnd Developer", "Software Engineer", "Web Developer"],
@@ -121,16 +125,18 @@ export default function Hero() {
         </AnimatedSection>
       </div>
       <div className="right-section animation ">
-        <Lottie
-          style={{ width: 400 }}
-          lottieRef={lottieRef}
-          onLoadedImages={() => {
-            // @ts-ignore
-            //https://lottiereact.com/
-            lottieRef.current.setSpeed(0.5);
-          }}
-          animationData={labtopAnimation}
-        />
+        <Suspense fallback={<Loading />}>
+          <Lottie
+            style={{ width: 400 }}
+            lottieRef={lottieRef}
+            onLoadedImages={() => {
+              // @ts-ignore
+              //https://lottiereact.com/
+              lottieRef.current.setSpeed(0.5);
+            }}
+            animationData={labtopAnimation}
+          />
+        </Suspense>
       </div>
     </section>
   );
