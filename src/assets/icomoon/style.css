@@ -1,25 +1,25 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?3aw208');
-  src:  url('fonts/icomoon.eot?3aw208#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?3aw208') format('truetype'),
-    url('fonts/icomoon.woff?3aw208') format('woff'),
-    url('fonts/icomoon.svg?3aw208#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("./fonts/icomoon.eot?sl6xu9");
+  src: url("./fonts/icomoon.eot?sl6xu9#iefix") format("embedded-opentype"),
+    url("./fonts/icomoon.ttf?sl6xu9") format("truetype"), url("./fonts/icomoon.woff?sl6xu9") format("woff"),
+    url("./fonts/icomoon.svg?sl6xu9#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  
+
   /* Enable Ligatures ================ */
   letter-spacing: 0;
   -webkit-font-feature-settings: "liga";
@@ -36,19 +36,22 @@
 }
 
 .icon-location:before {
-  content: "\e908";
+  content: "\e916";
 }
 .icon-map:before {
-  content: "\e908";
+  content: "\e916";
 }
 .icon-compass:before {
-  content: "\e908";
+  content: "\e916";
 }
 .icon-direction:before {
+  content: "\e916";
+}
+.icon-code:before {
   content: "\e908";
 }
-.icon-compass1:before {
-  content: "\e949";
+.icon-embed:before {
+  content: "\e908";
 }
 .icon-sun:before {
   content: "\e9d4";
@@ -71,6 +74,33 @@
 .icon-linkedin2:before {
   content: "\eaca";
 }
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-compass1:before {
+  content: "\e949";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-telegram1:before {
+  content: "\ea95";
+}
+.icon-code1:before {
+  content: "\e909";
+}
+.icon-calendar:before {
+  content: "\e90a";
+}
+.icon-tools:before {
+  content: "\e90b";
+}
+.icon-twitter-with-circle:before {
+  content: "\e906";
+}
+.icon-twitter1:before {
+  content: "\e907";
+}
 .icon-keyboard_arrow_up:before {
   content: "\e901";
 }
@@ -80,14 +110,17 @@
 .icon-facebook:before {
   content: "\e903";
 }
-.icon-direction1:before {
-  content: "\e909";
+.icon-arrow-right:before {
+  content: "\e904";
 }
-.icon-twitter-with-circle:before {
-  content: "\e906";
+.icon-link:before {
+  content: "\e905";
 }
-.icon-twitter1:before {
-  content: "\e907";
+.icon-menu:before {
+  content: "\e900";
+}
+.icon-code2:before {
+  content: "\e90c";
 }
 .icon-close:before {
   content: "\f00d";
@@ -109,12 +142,6 @@
 }
 .icon-github-square:before {
   content: "\f092";
-}
-.icon-phone:before {
-  content: "\f095";
-}
-.icon-phone-square:before {
-  content: "\f098";
 }
 .icon-twitter:before {
   content: "\f099";
@@ -143,15 +170,63 @@
 .icon-facebook-official:before {
   content: "\f230";
 }
+.icon-location-arrow:before {
+  content: "\e917";
+}
 .icon-telegram:before {
-  content: "\f2c6";
+  content: "\e90d";
 }
-.icon-arrow-right:before {
-  content: "\e904";
+.icon-code3:before {
+  content: "\e90e";
 }
-.icon-link:before {
-  content: "\e905";
+.icon-graduation-cap:before {
+  content: "\e90f";
 }
-.icon-menu:before {
-  content: "\e900";
+.icon-mortar-board:before {
+  content: "\e90f";
+}
+.icon-whatsapp1:before {
+  content: "\e910";
+}
+.icon-graduate:before {
+  content: "\e911";
+}
+.icon-hat:before {
+  content: "\e911";
+}
+.icon-graduate1:before {
+  content: "\e912";
+}
+.icon-hat1:before {
+  content: "\e912";
+}
+.icon-tools1:before {
+  content: "\e913";
+}
+.icon-options:before {
+  content: "\e913";
+}
+.icon-repair:before {
+  content: "\e913";
+}
+.icon-calendar1:before {
+  content: "\e914";
+}
+.icon-date:before {
+  content: "\e914";
+}
+.icon-schedule:before {
+  content: "\e914";
+}
+.icon-study:before {
+  content: "\e915";
+}
+.icon-graduation:before {
+  content: "\e915";
+}
+.icon-hat2:before {
+  content: "\e915";
+}
+.icon-college:before {
+  content: "\e915";
 }

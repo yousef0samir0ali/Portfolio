@@ -1,4 +1,3 @@
-import React from "react";
 import "./footer.css";
 
 export default function Footer() {
@@ -6,16 +5,22 @@ export default function Footer() {
     <footer className="flex">
       <ul className="flex">
         <li>
-          <a href="">About</a>
+          <a href="#up">About</a>
         </li>
         <li>
-          <a href="">Projects</a>
+          <a href="#skills">Skills</a>
         </li>
         <li>
-          <a href="">Speaking</a>
+          <a href="#education">Education</a>
         </li>
         <li>
-          <a href="">Uses</a>
+          <a href="#education">Experience</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
       <p>

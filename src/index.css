@@ -23,6 +23,7 @@ body {
   --subtitle-color: rgb(161 161 170);
   --bgHeader: rgb(39 39 42);
   --blue: rgb(93 188 252);
+  --progress-color: white;
   --icon-hover: #d4d4d8;
   --container-padding: 3rem;
 }
@@ -33,6 +34,7 @@ body {
   --border: rgba(202, 202, 202, 0.518);
   --title-color: rgb(39 39 42);
   --subtitle-color: rgb(82 82 91);
+  --progress-color: #d1d5db;
   --bgHeader: rgb(253 253 253);
   --blue: rgb(0 149 246);
   --icon-hover: #333;
@@ -68,10 +70,6 @@ a {
 .flex {
   display: flex;
   align-items: center;
-}
-
-.border {
-  border: 2px solid red;
 }
 
 button {
@@ -127,6 +125,13 @@ button:active {
 }
 
 /*End Scrollbar  */
+.animation-loading {
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 /* Start Media  */
 @media (max-width: 1199px) {
   .container {
@@ -135,6 +140,11 @@ button:active {
   }
 }
 
+@media (max-width: 767px) {
+  .animation {
+    width: 350px;
+  }
+}
 @media (max-width: 576px) {
   .container {
     width: 98%;

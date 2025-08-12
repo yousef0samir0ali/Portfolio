@@ -1,13 +1,13 @@
-import "./hero.css";
-import labtopAnimation from "../../animation/labtop1.json";
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import Typed from "typed.js";
-import { AnimatedSection } from "../../animation/animation";
+import './hero.css';
+import laptopAnimation from '../../assets/animation/laptop1.json';
+import { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import Typed from 'typed.js';
+import { AnimatedSection } from '../../assets/animation/animation';
 
-import React, { Suspense } from "react";
-import Loading from "../../components/loading/Loading";
-const Lottie = React.lazy(() => import("lottie-react"));
+import React, { Suspense } from 'react';
+import Loading from '../../components/loading/Loading';
+const Lottie = React.lazy(() => import('lottie-react'));
 
 export default function Hero() {
   const lottieRef = useRef();
@@ -15,7 +15,7 @@ export default function Hero() {
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
-      strings: ["FrontEnd Developer", "Software Engineer", "Web Developer"],
+      strings: ['FrontEnd Developer', 'Software Engineer', 'Web Developer'],
       typeSpeed: 60,
       backSpeed: 25,
       loop: true,
@@ -30,21 +30,16 @@ export default function Hero() {
       <div className="left-section">
         <div className="parent-avatar flex">
           <motion.img
-            initial={{ transform: "scale(0)" }}
-            animate={{ transform: "scale(1.1)" }}
-            transition={{ damping: 6, type: "spring", stiffness: 100 }}
+            initial={{ transform: 'scale(0)' }}
+            animate={{ transform: 'scale(1.1)' }}
+            transition={{ damping: 6, type: 'spring', stiffness: 100 }}
             className="avatar"
             src="/images/me-modified.png"
             alt=""
           />
           <div className="icon-verified" />
         </div>
-        <motion.div
-          className="intro"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 5 }}
-        >
+        <motion.div className="intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 5 }}>
           <h3>Hello, It&apos;s Me</h3>
           <h1>Yousef Ali</h1>
           <h3>
@@ -53,73 +48,35 @@ export default function Hero() {
         </motion.div>
         <AnimatedSection>
           <p>
-            I’m Yousef Ali, Software Engineer specializing in web development
-            using React JS, with experience in building interactive and
-            high-performance web applications. Passionate about delivering
-            innovative solutions and enhancing user experiences.
+            I’m Yousef Ali, Software Engineer and Frontend Developer with solid expertise in React.js, Next.js and
+            modern web technologies, specializing in building responsive, high-performance user interfaces. Skilled in
+            integrating RESTful APIs and working within microservices architectures. Committed to writing clean,
+            maintainable code and optimizing performance for seamless user experiences. Passionate about creating
+            intuitive, scalable web applications that deliver real business value.
           </p>
         </AnimatedSection>
         <div className="  icons flex">
-          <a
-            href="https://www.linkedin.com/in/yousefsamirali/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span
-              style={{ animationDelay: "0.2s" }}
-              className=" slide-right  flex icon-linkedin-square"
-            ></span>
+          <a href="https://www.linkedin.com/in/yousefsamirali/" target="_blank" rel="noopener noreferrer">
+            <span style={{ animationDelay: '0.2s' }} className=" slide-right  flex icon-linkedin-square"></span>
           </a>
 
-          <a
-            href="https://github.com/yousef0samir0ali"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span
-              style={{ animationDelay: "0.4s" }}
-              className=" slide-right flex icon icon-github"
-            ></span>
+          <a href="https://github.com/yousef0samir0ali" target="_blank" rel="noopener noreferrer">
+            <span style={{ animationDelay: '0.4s' }} className=" slide-right flex icon icon-github"></span>
           </a>
 
-          <a
-            href="https://www.facebook.com/yousefali48/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span
-              style={{ animationDelay: "0.6s" }}
-              className=" slide-right flex icon icon-facebook-square"
-            ></span>
+          <a href="https://www.facebook.com/yousefali48/" target="_blank" rel="noopener noreferrer">
+            <span style={{ animationDelay: '0.6s' }} className=" slide-right flex icon icon-facebook-square"></span>
           </a>
 
-          <a
-            href="https://www.instagram.com/yousef__s__ali/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span
-              style={{ animationDelay: "0.8s" }}
-              className=" slide-right flex icon icon-instagram"
-            ></span>
+          <a href="https://wa.me/+963997705460" target="_blank" rel="noopener noreferrer">
+            <span style={{ animationDelay: '0.8s' }} className=" slide-right flex icon icon-whatsapp"></span>
           </a>
-          <a
-            href="https://t.me/yousef_ali4"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span
-              style={{ animationDelay: "0.8s" }}
-              className=" slide-right flex icon-telegram"
-            ></span>
+          <a href="https://t.me/yousef_ali4" target="_blank" rel="noopener noreferrer">
+            <span style={{ animationDelay: '0.8s' }} className=" slide-right flex icon-telegram"></span>
           </a>
         </div>
         <AnimatedSection>
-          <a
-            className="download-cv"
-            href="/Yousef_Ali_Resume.pdf"
-            download={"Yousef_Ali_Resume"}
-          >
+          <a className="download-cv" href="/Yousef_Ali_Resume.pdf" download={'Yousef_Ali_Resume'}>
             Download CV
           </a>
         </AnimatedSection>
@@ -134,7 +91,7 @@ export default function Hero() {
               //https://lottiereact.com/
               lottieRef.current.setSpeed(0.5);
             }}
-            animationData={labtopAnimation}
+            animationData={laptopAnimation}
           />
         </Suspense>
       </div>

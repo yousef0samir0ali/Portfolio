@@ -3,6 +3,21 @@ header.flex {
   justify-content: space-between;
   padding: 0 2rem;
   margin-top: 1.2rem;
+  height: 43px;
+}
+header.flex.fixed {
+  position: fixed;
+  height: 70px;
+  background-color: var(--bgHeader);
+  width: 80%;
+  top: 0;
+  left: 0;
+  margin: 0 0 0 10%;
+  z-index: 100;
+  box-shadow: 1px 1px 20px rgba(53, 50, 50, 0.292);
+}
+header.flex.fixed nav {
+  box-shadow: unset;
 }
 
 header.flex nav {
@@ -13,7 +28,7 @@ header.flex nav {
 }
 
 header ul.flex {
-  gap: 16px;
+  gap: 20px;
 }
 
 header ul li a {
@@ -86,7 +101,7 @@ header .fixed {
   position: fixed;
   inset: 0;
   background-color: rgba(40, 40, 48, 0.91);
-  z-index: 10;
+  z-index: 200;
   backdrop-filter: blur(4px);
 }
 
@@ -143,6 +158,27 @@ header .fixed ul.modal li a {
 
   header button.menu {
     display: block;
+  }
+}
+@media (max-width: 1199px) {
+  header.flex.fixed {
+    width: 90%;
+    margin: 0 0 0 5%;
+  }
+}
+@media (max-width: 767px) {
+  header.flex nav {
+    display: none;
+  }
+
+  header button.menu {
+    display: block;
+  }
+}
+@media (max-width: 575px) {
+  header.flex.fixed {
+    width: 98%;
+    margin: 0 0 0 1%;
   }
 }
 

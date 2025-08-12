@@ -1,0 +1,122 @@
+.skills {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Skills Progress  */
+
+.skill-box-progress {
+  width: 40%;
+  padding: 10px 0;
+}
+
+.skill-progress {
+  background-color: var(--progress-color);
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.skill-progress:not(:last-of-type) {
+  margin: 0 0 50px;
+}
+.skill-progress-name,
+.skill-progress-value {
+  position: absolute;
+  top: -25px;
+  z-index: 1;
+  color: var(--title-color);
+  font-size: 18px;
+}
+.skill-progress-value {
+  right: 5px;
+}
+.skill-progress-name {
+  left: 5px;
+}
+.skill-progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--blue);
+  border-radius: 10px 0 0 10px;
+  transition: 2s;
+}
+
+/* Skills Circle  */
+
+.skill-box-circle {
+  width: 58%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.skill-circle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  margin-bottom: 20px;
+}
+.skill-circle {
+  --value: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(var(--blue) calc(var(--value) * 1%), var(--progress-color) 0);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  opacity: 0;
+}
+.skill-circle::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: var(--secondary);
+  border-radius: 50%;
+  z-index: 1;
+}
+.skill-circle.fill {
+  animation: fill-circle 0.5s ease-out forwards;
+}
+@keyframes fill-circle {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.skill-circle span,
+.skill-circle-name {
+  z-index: 1;
+  color: var(--title-color);
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Media Queries */
+
+@media (max-width: 991px) {
+  .skills {
+    flex-direction: column;
+  }
+  .skill-box-progress {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .skill-box-circle {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .skill-circle-wrapper {
+    width: 33%;
+  }
+}

@@ -1,48 +1,68 @@
 import { useEffect, useState } from "react";
 import "./header.css";
-import { AnimatedSection } from "../../animation/animation";
+import { AnimatedSection } from "../../assets/animation/animation";
 export default function Header() {
   const [showModal, setShowModal] = useState(false);
 
-  const [theem, setTheem] = useState(
-    localStorage.getItem("curentMode") ?? "dark"
-  );
+  const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark");
+
+  const [fixed, setFixed] = useState(false);
+
+  const handleScroll = () => {
+    setFixed(window.scrollY > 43);
+  };
+
   useEffect(() => {
-    if (theem === "dark") {
-      document.body.classList.add(theem);
+    if (theme === "dark") {
+      document.body.classList.add(theme);
       document.body.classList.remove("light");
     } else {
-      document.body.classList.add(theem);
+      document.body.classList.add(theme);
       document.body.classList.remove("dark");
     }
-  }, [theem]);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [theme]);
 
   return (
-    <header id="up" className="flex ">
+    <header className={`flex ${fixed ? "fixed" : ""}`}>
       <button className="icon-menu menu" onClick={() => setShowModal(true)} />
       {showModal && (
         <div className="fixed">
           <ul className="modal ">
             <li>
-              <button
-                className="icon-close"
-                onClick={() => setShowModal(false)}
-              />
+              <button className="icon-close" onClick={() => setShowModal(false)} />
             </li>
             <li>
-              <a href="">About</a>
+              <a onClick={() => setShowModal(false)} href="#up">
+                About
+              </a>
             </li>
             <li>
-              <a href="">Articles</a>
+              <a onClick={() => setShowModal(false)} href="#skills">
+                Skills
+              </a>
             </li>
             <li>
-              <a href="">Projects</a>
+              <a onClick={() => setShowModal(false)} href="#education">
+                Education
+              </a>
             </li>
             <li>
-              <a href="">Speaking</a>
+              <a onClick={() => setShowModal(false)} href="#education">
+                Experience
+              </a>
             </li>
             <li>
-              <a href="">Uses</a>
+              <a onClick={() => setShowModal(false)} href="#projects">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setShowModal(false)} href="#contact">
+                Contact Us
+              </a>
             </li>
           </ul>
         </div>
@@ -52,19 +72,22 @@ export default function Header() {
         <nav>
           <ul className="flex">
             <li>
-              <a href="">About</a>
+              <a href="#up">About</a>
             </li>
             <li>
-              <a href="">Articles</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="">Projects</a>
+              <a href="#education">Education</a>
             </li>
             <li>
-              <a href="">Speaking</a>
+              <a href="#education">Experience</a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -72,14 +95,11 @@ export default function Header() {
       <button
         className="mode flex"
         onClick={() => {
-          localStorage.setItem(
-            "curentMode",
-            theem === "dark" ? "light" : "dark"
-          );
-          setTheem(localStorage.getItem("curentMode"));
+          localStorage.setItem("currentMode", theme === "dark" ? "light" : "dark");
+          setTheme(localStorage.getItem("currentMode"));
         }}
       >
-        <span className={theem === "dark" ? "icon-moon-o" : "icon-sun"}></span>
+        <span className={theme === "dark" ? "icon-moon-o" : "icon-sun"}></span>
       </button>
     </header>
   );

@@ -1,35 +1,34 @@
-import { useEffect, useState } from "react";
 import Header from "./components/1-header/Header";
 import Hero from "./components/2-hero/Hero";
-import MainContent from "./components/3-main_content/MainContent";
-import Contact from "./components/4-contact/Contact";
-import Footer from "./components/5-footer/Footer";
+import MainContent from "./components/5-main_content/MainContent";
+import Contact from "./components/6-contact/Contact";
+import Footer from "./components/7-footer/Footer";
+import HeadingTitle from "./components/heading-title/HeadingTitle";
+import Skills from "./components/3-skills/Skills";
+import Education from "./components/4-education/Education";
+import ToUp from "./components/to-up/ToUp";
+import "./assets/icomoon/style.css";
 
 function App() {
-  const [scroll, setScroll] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    });
-  }, []);
-
   return (
     <div className="container">
       <Header />
       <Hero />
       <div className="divider" />
+      <HeadingTitle title="Skills" id="skills" />
+      <Skills />
+      <div className="divider" id="education" />
+      <HeadingTitle title="Education && Experience" />
+      <Education />
+      <div className="divider" id="projects" />
+      <HeadingTitle title="My Projects" />
       <MainContent />
       <div className="divider" />
+      <HeadingTitle title="Contact Us" id="contact" />
       <Contact />
       <div className="divider" />
       <Footer />
-      <a href="#up">
-        <button style={{ opacity: scroll ? 1 : 0 }} className="scroll-to-top icon-keyboard_arrow_up flex"></button>
-      </a>
+      <ToUp />
     </div>
   );
 }
