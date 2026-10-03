@@ -1,0 +1,151 @@
+{
+  "seeMore": "See more",
+  "github": "GitHub",
+  "gitlab": "GitLab",
+  "live": "Live",
+  "keyFeatures": "Key Features",
+  "techStack": "Tech Stack",
+  "sourceCode": "Source Code",
+  "liveDemo": "Live Demo",
+  "close": "Close",
+  "categories": {
+    "all Projects": "all Projects",
+    "next js": "next js",
+    "react js": "react js",
+    "html && css": "html && css",
+    "javaScript pure": "javaScript pure"
+  },
+  "items": {
+    "12": {
+      "title": "Taqat Academy",
+      "description": "A multilingual e-learning platform offering courses, seminars, and articles, with complete authentication, course enrollment and purchasing, multi-currency pricing, advanced search and filtering, and fully dynamic content managed through a custom-built admin dashboard.",
+      "subDescription": "Using Next.js, TypeScript, Tailwind CSS, Redux Toolkit, i18n, RESTful APIs.",
+      "features": [
+        "Multilingual (i18n) interface with full RTL/LTR support.",
+        "Complete authentication flow: login, registration, and forgot/reset password.",
+        "Course enrollment and a secure purchase flow for paid courses.",
+        "Multi-currency pricing with instant switching between SAR and USD.",
+        "Advanced search and filtering across courses, seminars, and articles.",
+        "Informational pages: About Us, Contact Us, Privacy Policy, and Terms of Use.",
+        "Fully dynamic content powered by a custom admin dashboard I developed.",
+        "Smooth animations, image galleries, and a fully responsive design."
+      ]
+    },
+    "13": {
+      "title": "Meetm ERP",
+      "description": "A comprehensive ERP dashboard for managing users and business data, featuring role-based access control, interactive charts and reports, a notification system for targeted or broadcast messaging, and real-time chat monitoring and moderation powered by Pusher.",
+      "subDescription": "Using Next.js, TypeScript, MUI, Redux Toolkit, Pusher, RESTful APIs.",
+      "features": [
+        "Secure authentication with roles and permissions (RBAC).",
+        "User and data management with full CRUD operations.",
+        "Statistics and reports visualized through interactive charts.",
+        "Notification center: create and send notifications to all or selected users.",
+        "Real-time chat with users powered by Pusher.",
+        "Live monitoring of user-to-user conversations with block and suspend controls.",
+        "Account settings for updating profile and security information.",
+        "Responsive, data-rich UI built with MUI components."
+      ]
+    },
+    "14": {
+      "title": "QuoteHub Dashboard",
+      "description": "An end-to-end marketplace system I built across three dashboards — admin, customer, and provider — where customers post requests, providers submit offers, and both negotiate in real time under full admin supervision, with approvals, reports, support, and complete content management.",
+      "subDescription": "Using Next.js, TypeScript, Pusher, MUI, Redux Toolkit, RESTful APIs.",
+      "features": [
+        "Three interconnected dashboards (admin, customer, and provider), all built by me.",
+        "Full authentication with role-based access for each side of the platform.",
+        "Request-to-offer workflow: customers create requests and providers submit offers.",
+        "Real-time chat via Pusher across three stages: negotiation, acceptance, and warranty.",
+        "Admin monitoring of every conversation, with the ability to suspend or stop it.",
+        "Profile update requests from customers and providers require admin approval.",
+        "Block and report flows between users, all routed to the admin for review.",
+        "Dedicated management for ratings, reports, support tickets, and discount codes.",
+        "CMS sections for About, Privacy Policy, Terms, cities, and site settings.",
+        "Full CRUD with status control and interactive charts on every module."
+      ]
+    },
+    "15": {
+      "title": "MLA Academy",
+      "description": "An educational platform for browsing and enrolling in courses, built with TypeScript, featuring a complete authentication flow, Stripe-powered checkout, and fully dynamic content managed through a dedicated admin dashboard.",
+      "subDescription": "Using Next.js, TypeScript, Stripe, Tailwind CSS, RESTful APIs.",
+      "features": [
+        "Course catalog with detailed course pages and enrollment.",
+        "Complete authentication: registration, login, and account recovery.",
+        "Secure course payments processed end to end with Stripe.",
+        "All content is dynamic and controlled from a custom admin dashboard.",
+        "Responsive, accessible interface written in TypeScript."
+      ]
+    },
+    "16": {
+      "title": "QuoteHub",
+      "description": "The public marketing site for the QuoteHub platform, presenting the customer and provider dashboards, their features, and subscription plans, with polished animations that guide visitors toward signing up.",
+      "subDescription": "Using Next.js, TypeScript, Tailwind CSS, Framer Motion.",
+      "features": [
+        "Clear presentation of the platform's features and pricing plans.",
+        "Dedicated sections describing the customer and provider dashboards.",
+        "Subscription flow that onboards users into the platform.",
+        "Smooth, modern animations throughout the page.",
+        "Fully responsive layout optimized for conversions."
+      ]
+    },
+    "17": {
+      "title": "Bold Website",
+      "description": "A polished company website that introduces the business, showcases its services and pricing, and publishes a blog, designed to attract and convert clients with a modern, animated experience.",
+      "subDescription": "Using Next.js, TypeScript, Tailwind CSS, Framer Motion.",
+      "features": [
+        "Company profile with a clear presentation of services and pricing.",
+        "Blog section for publishing articles and updates.",
+        "Client-focused layout built to drive inquiries and engagement.",
+        "Smooth animations and a fully responsive design."
+      ]
+    },
+    "1": {
+      "title": "Syria Sooq App",
+      "description": "Developed a full-featured application during my work at View Programming Company, transforming designs from Figma and API specifications from Postman into a responsive, efficient product."
+    },
+    "2": {
+      "title": "E-Commerce App",
+      "description": "Built a responsive e-commerce app with category filtering, price sorting, cart system, authentication and pagination.",
+      "subDescription": "Using React, Vite, Redux Toolkit, Axios, React Router DOM."
+    },
+    "3": {
+      "title": "Book Store App",
+      "description": "Developed a dynamic bookstore with book slider, author search, and user authentication.",
+      "subDescription": "Using React, Vite, Context API, React Router DOM, Toastify."
+    },
+    "4": {
+      "title": "Exam Question Builder",
+      "description": "Designed to allow users to create, edit, delete, and view exam questions. Supports multiple question types (Text, True/False, Single Choice).",
+      "subDescription": "Using React, Vite, React Router, CSS."
+    },
+    "5": {
+      "title": "Portfolio Web Application",
+      "description": "Created a personal portfolio with project filtering and interactive UI animations.",
+      "subDescription": "Using React, Vite, Framer Motion, Lottie."
+    },
+    "6": {
+      "title": "Invoice Generator",
+      "description": "A single-page web application to generate and export invoices as PDF, displaying client data, totals, and services.",
+      "subDescription": "Using React, Vite, html2canvas, jsPDF."
+    },
+    "7": {
+      "title": "Restaurant Landing Page",
+      "description": "Developed a visually engaging restaurant landing page with dynamic background color transitions triggered by navigation arrows.",
+      "subDescription": "Using React.js, HTML and CSS."
+    },
+    "8": {
+      "title": "Animated Photo Gallery",
+      "description": "Built a responsive image gallery with color customization and animation control, including pause/resume and dynamic styling for interactivity.",
+      "subDescription": "Using HTML, CSS, JavaScript."
+    },
+    "9": {
+      "title": "Landing Page",
+      "description": "Landing page designed to attract visitors.",
+      "subDescription": "Using HTML, CSS."
+    },
+    "10": {
+      "title": "User Interface",
+      "description": "User interface design for an interactive website.",
+      "subDescription": "Using HTML, CSS."
+    }
+  }
+}

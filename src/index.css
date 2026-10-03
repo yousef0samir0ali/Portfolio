@@ -1,5 +1,5 @@
 /*Start Global Rules  */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Lato:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -13,6 +13,10 @@ body {
   color: #fff;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.1px;
+}
+
+html[lang="ar"] body {
+  font-family: "Cairo", "Roboto", sans-serif;
 }
 
 :root {
@@ -54,7 +58,7 @@ body {
   border-bottom: 1px solid var(--border);
   margin: 3rem 0;
   width: calc(100% + var(--container-padding) + var(--container-padding));
-  margin-left: calc(var(--container-padding) * -1);
+  margin-inline-start: calc(var(--container-padding) * -1);
 }
 
 li {
@@ -86,7 +90,7 @@ button:active {
 .scroll-to-top {
   position: fixed;
   bottom: 2rem;
-  right: 3%;
+  inset-inline-end: 3%;
   height: 3rem;
   width: 3rem;
   font-size: 3rem;

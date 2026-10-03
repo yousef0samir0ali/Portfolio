@@ -1,0 +1,8 @@
+{
+  "hello": "Hello, It's Me",
+  "name": "Yousef Ali",
+  "andIm": "And I'm a",
+  "roles": ["Front-End Developer", "Software Engineer", "React & Next.js Developer"],
+  "summary": "Frontend Developer with 4+ years of experience building scalable, responsive web applications using React.js, Next.js, TypeScript, and Tailwind CSS. Skilled in developing reusable components, ERP systems, and e-commerce applications, integrating RESTful APIs, optimizing performance, and managing state with Redux Toolkit. Passionate about clean code, modern frontend best practices, and delivering high-quality user experiences in Agile teams.",
+  "downloadCv": "Download CV"
+}

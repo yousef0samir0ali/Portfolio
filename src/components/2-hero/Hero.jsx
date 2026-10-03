@@ -7,19 +7,18 @@ import { AnimatedSection } from "../../assets/animation/animation";
 
 import React, { Suspense } from "react";
 import Loading from "../../components/loading/Loading";
+import { useTranslation } from "react-i18next";
 const Lottie = React.lazy(() => import("lottie-react"));
 
 export default function Hero() {
+  const { t, i18n } = useTranslation("hero");
   const lottieRef = useRef();
   const typedElement = useRef();
 
   useEffect(() => {
+    const roles = t("roles", { returnObjects: true });
     const typed = new Typed(typedElement.current, {
-      strings: [
-        "Front-End Developer",
-        "Software Engineer",
-        "React & Next.js Developer",
-      ],
+      strings: Array.isArray(roles) ? roles : [],
       typeSpeed: 60,
       backSpeed: 25,
       loop: true,
@@ -27,7 +26,7 @@ export default function Hero() {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, [i18n.language, t]);
 
   return (
     <section className="hero flex">
@@ -49,22 +48,14 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 5 }}
         >
-          <h3>Hello, It&apos;s Me</h3>
-          <h1>Yousef Ali</h1>
+          <h3>{t("hello")}</h3>
+          <h1>{t("name")}</h1>
           <h3>
-            And I&apos;m a <span ref={typedElement}></span>
+            {t("andIm")} <span ref={typedElement}></span>
           </h3>
         </motion.div>
         <AnimatedSection>
-          <p>
-            Frontend Developer with 4+ years of experience building scalable,
-            responsive web applications using React.js, Next.js, TypeScript, and
-            Tailwind CSS. Skilled in developing reusable components, ERP
-            systems, and e-commerce applications, integrating RESTful APIs,
-            optimizing performance, and managing state with Redux Toolkit.
-            Passionate about clean code, modern frontend best practices, and
-            delivering high-quality user experiences in Agile teams.
-          </p>
+          <p>{t("summary")}</p>
         </AnimatedSection>
         <div className="  icons flex">
           <a
@@ -87,6 +78,17 @@ export default function Hero() {
               style={{ animationDelay: "0.4s" }}
               className=" slide-right flex icon icon-github"
             ></span>
+          </a>
+
+          <a href="https://gitlab.com/Yousef_ali" target="_blank" rel="noopener noreferrer" aria-label="GitLab">
+            <span style={{ animationDelay: "0.5s" }} className=" slide-right flex icon gitlab-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M23.955 13.587l-1.342-4.135-2.664-8.189a.455.455 0 0 0-.867 0L16.418 9.45H7.582L4.918 1.263a.455.455 0 0 0-.867 0L1.386 9.452.044 13.587a.924.924 0 0 0 .331 1.023L12 23.054l11.625-8.443a.92.92 0 0 0 .33-1.024"
+                />
+              </svg>
+            </span>
           </a>
 
           <a
@@ -127,7 +129,7 @@ export default function Hero() {
             href="/Yousef_Ali_Resume.pdf"
             download={"Yousef_Ali_Resume"}
           >
-            Download CV
+            {t("downloadCv")}
           </a>
         </AnimatedSection>
       </div>

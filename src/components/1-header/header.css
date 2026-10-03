@@ -11,8 +11,9 @@ header.flex.fixed {
   background-color: var(--bgHeader);
   width: 80%;
   top: 0;
-  left: 0;
-  margin: 0 0 0 10%;
+  inset-inline-start: 0;
+  margin-top: 0;
+  margin-inline-start: 10%;
   z-index: 100;
   box-shadow: 1px 1px 20px rgba(53, 50, 50, 0.292);
 }
@@ -58,8 +59,13 @@ header button.icon-menu {
   font-size: 1.5rem;
 }
 
+header .header-actions {
+  gap: 0.6rem;
+}
+
 header button.icon-menu,
-header button.mode {
+header button.mode,
+header button.lang {
   background-color: var(--bgHeader);
   height: 2.4rem;
   width: 2.4rem;
@@ -76,8 +82,14 @@ header button.mode {
   color: rgb(255, 165, 0);
 }
 
+header button.lang {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
 header button.icon-menu:hover,
-header button.mode:hover {
+header button.mode:hover,
+header button.lang:hover {
   color: var(--title-color);
   border: 1px solid orange;
 }
@@ -163,7 +175,7 @@ header .fixed ul.modal li a {
 @media (max-width: 1199px) {
   header.flex.fixed {
     width: 90%;
-    margin: 0 0 0 5%;
+    margin-inline-start: 5%;
   }
 }
 @media (max-width: 767px) {
@@ -178,7 +190,7 @@ header .fixed ul.modal li a {
 @media (max-width: 575px) {
   header.flex.fixed {
     width: 98%;
-    margin: 0 0 0 1%;
+    margin-inline-start: 1%;
   }
 }
 

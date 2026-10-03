@@ -29,7 +29,7 @@
   background-color: var(--blue);
   width: 2px;
   height: 100%;
-  left: -25px;
+  inset-inline-start: -25px;
 }
 .box-container .box {
   background-color: var(--bgHeader);
@@ -51,10 +51,10 @@
   height: 16px;
   background-color: var(--blue);
   border-radius: 50%;
-  left: -53px;
+  inset-inline-start: -53px;
 }
 .box-year span {
-  margin-right: 10px;
+  margin-inline-end: 10px;
   color: var(--title-color);
 }
 .box-title {

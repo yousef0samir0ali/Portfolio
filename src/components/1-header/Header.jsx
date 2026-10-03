@@ -1,7 +1,20 @@
 import { useEffect, useState } from "react";
 import "./header.css";
 import { AnimatedSection } from "../../assets/animation/animation";
+import { useTranslation } from "react-i18next";
+
+const NAV_LINKS = [
+  { href: "#up", key: "about" },
+  { href: "#skills", key: "skills" },
+  { href: "#experience", key: "experience" },
+  { href: "#education", key: "education" },
+  { href: "#projects", key: "projects" },
+  { href: "#contact", key: "contact" },
+];
+
 export default function Header() {
+  const { t, i18n } = useTranslation("header");
+  const isArabic = i18n.language?.startsWith("ar");
   const [showModal, setShowModal] = useState(false);
 
   const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark");
@@ -27,43 +40,20 @@ export default function Header() {
 
   return (
     <header className={`flex ${fixed ? "fixed" : ""}`}>
-      <button className="icon-menu menu" onClick={() => setShowModal(true)} />
+      <button className="icon-menu menu" aria-label={t("openMenu")} onClick={() => setShowModal(true)} />
       {showModal && (
         <div className="fixed">
           <ul className="modal ">
             <li>
-              <button className="icon-close" onClick={() => setShowModal(false)} />
+              <button className="icon-close" aria-label={t("closeMenu")} onClick={() => setShowModal(false)} />
             </li>
-            <li>
-              <a onClick={() => setShowModal(false)} href="#up">
-                About
-              </a>
-            </li>
-            <li>
-              <a onClick={() => setShowModal(false)} href="#skills">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a onClick={() => setShowModal(false)} href="#experience">
-                Experience
-              </a>
-            </li>
-            <li>
-              <a onClick={() => setShowModal(false)} href="#education">
-                Education
-              </a>
-            </li>
-            <li>
-              <a onClick={() => setShowModal(false)} href="#projects">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a onClick={() => setShowModal(false)} href="#contact">
-                Contact Us
-              </a>
-            </li>
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <a onClick={() => setShowModal(false)} href={link.href}>
+                  {t(link.key)}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       )}
@@ -71,36 +61,33 @@ export default function Header() {
       <AnimatedSection>
         <nav>
           <ul className="flex">
-            <li>
-              <a href="#up">About</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#education">Education</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact Us</a>
-            </li>
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <a href={link.href}>{t(link.key)}</a>
+              </li>
+            ))}
           </ul>
         </nav>
       </AnimatedSection>
-      <button
-        className="mode flex"
-        onClick={() => {
-          localStorage.setItem("currentMode", theme === "dark" ? "light" : "dark");
-          setTheme(localStorage.getItem("currentMode"));
-        }}
-      >
-        <span className={theme === "dark" ? "icon-moon-o" : "icon-sun"}></span>
-      </button>
+      <div className="header-actions flex">
+        <button
+          className="lang flex"
+          aria-label={t("switchLanguage")}
+          onClick={() => i18n.changeLanguage(isArabic ? "en" : "ar")}
+        >
+          {isArabic ? "EN" : "ع"}
+        </button>
+        <button
+          className="mode flex"
+          aria-label={t("switchTheme")}
+          onClick={() => {
+            localStorage.setItem("currentMode", theme === "dark" ? "light" : "dark");
+            setTheme(localStorage.getItem("currentMode"));
+          }}
+        >
+          <span className={theme === "dark" ? "icon-moon-o" : "icon-sun"}></span>
+        </button>
+      </div>
     </header>
   );
 }

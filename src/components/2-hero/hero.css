@@ -67,6 +67,12 @@ section.hero .left-section {
     font-size: 1.3rem;
 }
 
+.hero .icons.flex .gitlab-icon svg {
+    width: 1.15em;
+    height: 1.15em;
+    display: block;
+}
+
 .hero .icons.flex span:hover {
     border: 1px solid var(--blue);
     transition: .3s;

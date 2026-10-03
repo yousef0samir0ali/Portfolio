@@ -1,0 +1,15 @@
+{
+  "address": "Address",
+  "addressValue": "Tartous, Syria",
+  "email": "Email",
+  "phone": "Phone",
+  "intro": "Contact us for more information and Get notified when I publish something new:",
+  "emailLabel": "Email Address:",
+  "messageLabel": "Your Message:",
+  "emailPrefix": "Email",
+  "messagePrefix": "Message",
+  "send": "Send",
+  "sending": "Sending ...",
+  "success": "Thanks for you ! Your message has been sent successfully.",
+  "ok": "Ok"
+}

@@ -54,7 +54,10 @@ main.flex .right-section.flex {
   border-radius: 5px;
   /* cursor: pointer; */
   background-color: var(--bgHeader);
-  height: 350px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -71,31 +74,84 @@ main.flex .right-section.flex {
   border-radius: 5px;
   height: 127px;
   width: 266px;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
 .card .box {
   padding: 1rem 0.4rem;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .card .box h1 {
   color: var(--title-color);
   text-transform: capitalize;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
 }
 
 .card .box p {
   color: var(--subtitle-color);
   font-size: 0.8rem;
-  margin: 0.7rem 0 1.1rem;
+  margin: 0.7rem 0 0.8rem;
   line-height: 1.5;
-  height: 118px;
-  /* overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; */
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
+/* Clamp long text so it never overflows the card */
+.card .box p.clamp {
+  flex: 0 0 auto;
+  margin-bottom: 0.3rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+}
+
+.card .box .see-more {
+  display: inline-flex;
+  align-self: flex-start;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 0.8rem;
+  color: var(--blue);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.card .box .see-more span {
+  font-size: 0.7rem;
+  transition: 0.2s;
+}
+
+.card .box .see-more:hover span {
+  transform: translateX(4px);
+}
+
+html[dir="rtl"] .card .box .see-more span {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .card .box .see-more:hover span {
+  transform: scaleX(-1) translateX(4px);
+}
+
 .card .box .icons.flex {
   justify-content: space-between;
+  margin-top: auto;
+  flex-shrink: 0;
 }
 .card .box .icons.flex .icon {
   align-items: center;
@@ -104,12 +160,184 @@ main.flex .right-section.flex {
 .card .box .icons.flex .icon:hover {
   color: var(--icon-hover);
 }
-.card .box .icons.flex .icon span:first-of-type {
+.card .box .icons.flex .icon-github,
+.project-dialog-links .icon-github {
   font-size: 1.2rem;
-  margin-right: 3px;
+  margin-inline-end: 3px;
+}
+
+.card .box .icons.flex .gitlab-mark,
+.project-dialog-links .gitlab-mark {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-inline-end: 3px;
+  flex-shrink: 0;
 }
 
 /* End Right Section  */
+
+/* Start Project Dialog  */
+.project-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(40, 40, 48, 0.91);
+  z-index: 200;
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+  padding: 2rem 0;
+}
+
+.project-dialog {
+  position: relative;
+  width: min(760px, 92%);
+  margin: 0 auto;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background-color: var(--secondary);
+  box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  animation: dialog-popup 0.5s ease;
+}
+
+@keyframes dialog-popup {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.project-dialog-close {
+  position: absolute;
+  top: 0.8rem;
+  inset-inline-end: 0.8rem;
+  z-index: 1;
+  height: 2.4rem;
+  width: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--bgHeader);
+  border: 1px solid var(--border);
+  color: var(--subtitle-color);
+  font-size: 1.3rem;
+  transition: 0.2s;
+}
+
+.project-dialog-close:hover {
+  color: red;
+  rotate: 160deg;
+  border-color: red;
+}
+
+.project-dialog-img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-dialog-body {
+  padding: 1.5rem 2rem 2rem;
+}
+
+.project-dialog-head {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.project-dialog-head h2 {
+  color: var(--title-color);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
+.project-dialog-tags {
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-dialog-tags span {
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  color: var(--blue);
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.project-dialog-desc,
+.project-dialog-stack {
+  color: var(--subtitle-color);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.project-dialog-body h3 {
+  margin: 1.4rem 0 0.6rem;
+  color: var(--title-color);
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.project-dialog-features li {
+  position: relative;
+  padding-inline-start: 1.3rem;
+  margin-bottom: 0.45rem;
+  color: var(--subtitle-color);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.project-dialog-features li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.55rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--blue);
+}
+
+.project-dialog-links {
+  gap: 1rem;
+  margin-top: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.project-dialog-links a {
+  gap: 6px;
+  padding: 0.55rem 1.2rem;
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+  color: var(--title-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.project-dialog-links .icon-github,
+.project-dialog-links .icon-link {
+  font-size: 1.1rem;
+}
+
+.project-dialog-links a:hover {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+/* End Project Dialog  */
 
 /* Start Media  */
 @media (max-width: 767px) {
@@ -128,6 +356,18 @@ main.flex .right-section.flex {
     width: 7rem;
     padding: 0.8rem 0;
     font-size: 0.9rem;
+  }
+
+  .project-dialog-img {
+    height: 200px;
+  }
+
+  .project-dialog-body {
+    padding: 1.2rem 1.2rem 1.5rem;
+  }
+
+  .project-dialog-head h2 {
+    font-size: 1.3rem;
   }
 }
 

@@ -7,9 +7,11 @@ import { AnimatedSection } from "../../assets/animation/animation";
 
 import React, { Suspense } from "react";
 import Loading from "../loading/Loading";
+import { useTranslation } from "react-i18next";
 const Lottie = React.lazy(() => import("lottie-react"));
 
 export default function Contact() {
+  const { t } = useTranslation("contact");
   const [ok, setOk] = useState(false);
   const [state, handleSubmit] = useForm("xpwaybeb");
   useEffect(() => {
@@ -29,8 +31,8 @@ export default function Contact() {
             className=" info-sub flex"
           >
             <span className="icon-location flex"></span>
-            <h3>Address</h3>
-            <div className="info-sub-desc">Tartous, Syria</div>
+            <h3>{t("address")}</h3>
+            <div className="info-sub-desc">{t("addressValue")}</div>
           </a>
           <a
             href="mailto:yosf.samir.ali@gmail.com"
@@ -39,38 +41,38 @@ export default function Contact() {
             className="info-sub flex"
           >
             <span className="icon-envelope flex"></span>
-            <h3>Email</h3>
+            <h3>{t("email")}</h3>
             <div className="info-sub-desc">yosf.samir.ali@gmail.com</div>
           </a>
           <a href="tel:+963997705460" target="_blank" rel="noopener noreferrer" className="info-sub flex">
             <span className="icon-phone flex"></span>
-            <h3>Phone</h3>
+            <h3>{t("phone")}</h3>
             <div className="info-sub-desc">+963 997 705 460</div>
           </a>
         </div>
       </AnimatedSection>
       <AnimatedSection>
-        <p>Contact us for more information and Get notified when I publish something new:</p>
+        <p>{t("intro")}</p>
       </AnimatedSection>
       <div style={{ justifyContent: "space-between", alignItems: "flex-end" }} className="flex">
         <form onSubmit={handleSubmit}>
           <AnimatedSection>
             <div className="form-control flex">
-              <label htmlFor="email">Email Address:</label>
+              <label htmlFor="email">{t("emailLabel")}</label>
               <input type="email" name="email" id="email" required />
-              <ValidationError prefix="Email" field="email" errors={state.errors} />
+              <ValidationError prefix={t("emailPrefix")} field="email" errors={state.errors} />
             </div>
           </AnimatedSection>
           <AnimatedSection>
             <div className="form-control flex">
-              <label htmlFor="message">Your Message:</label>
+              <label htmlFor="message">{t("messageLabel")}</label>
               <textarea name="message" id="message" required></textarea>
-              <ValidationError prefix="Message" field="message" errors={state.errors} />
+              <ValidationError prefix={t("messagePrefix")} field="message" errors={state.errors} />
             </div>
           </AnimatedSection>
           <AnimatedSection>
             <button type="submit" disabled={state.submitting}>
-              {state.submitting ? "Sending ..." : "Send"}
+              {state.submitting ? t("sending") : t("send")}
             </button>
           </AnimatedSection>
           {ok && (
@@ -89,7 +91,7 @@ export default function Contact() {
                       animationData={doneAnimation}
                     />
                   </Suspense>
-                  Thanks for you ! Your message has been sent successfully.
+                  {t("success")}
                 </p>
                 <button
                   className="ok"
@@ -99,7 +101,7 @@ export default function Contact() {
                     window.navigation.reload();
                   }}
                 >
-                  Ok
+                  {t("ok")}
                 </button>
               </div>
             </div>

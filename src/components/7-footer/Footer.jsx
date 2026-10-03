@@ -1,30 +1,33 @@
 import "./footer.css";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation(["footer", "header"]);
+
   return (
     <footer className="flex">
       <ul className="flex">
         <li>
-          <a href="#up">About</a>
+          <a href="#up">{t("header:about")}</a>
         </li>
         <li>
-          <a href="#skills">Skills</a>
+          <a href="#skills">{t("header:skills")}</a>
         </li>
         <li>
-          <a href="#experience">Experience</a>
+          <a href="#experience">{t("header:experience")}</a>
         </li>
         <li>
-          <a href="#education">Education</a>
+          <a href="#education">{t("header:education")}</a>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <a href="#projects">{t("header:projects")}</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">{t("header:contactShort")}</a>
         </li>
       </ul>
       <p>
-        Designed and developed by <span>Eng.Yousef Ali</span> &copy; {new Date().getFullYear()}
+        {t("credit")} <span>{t("name")}</span> &copy; {new Date().getFullYear()}
       </p>
     </footer>
   );

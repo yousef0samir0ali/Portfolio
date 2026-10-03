@@ -9,26 +9,29 @@ import Education from "./components/4-education/Education";
 import Experience from "./components/4-experience/Experience";
 import ToUp from "./components/to-up/ToUp";
 import "./assets/icomoon/style.css";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation();
+
   return (
     <div className="container">
       <Header />
       <Hero />
       <div className="divider" />
-      <HeadingTitle title="Skills" id="skills" />
+      <HeadingTitle title={t("sections.skills")} id="skills" />
       <Skills />
       <div className="divider" id="experience" />
-      <HeadingTitle title="Experience" />
+      <HeadingTitle title={t("sections.experience")} />
       <Experience />
       <div className="divider" id="education" />
-      <HeadingTitle title="Education" />
+      <HeadingTitle title={t("sections.education")} />
       <Education />
       <div className="divider" id="projects" />
-      <HeadingTitle title="My Projects" />
+      <HeadingTitle title={t("sections.projects")} />
       <MainContent />
       <div className="divider" />
-      <HeadingTitle title="Contact Us" id="contact" />
+      <HeadingTitle title={t("sections.contact")} id="contact" />
       <Contact />
       <div className="divider" />
       <Footer />

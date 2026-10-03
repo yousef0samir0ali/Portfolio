@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "date": "Mar 2019 - Mar 2023",
+      "title": "Bachelor Degree in Informatics Engineering (IT)",
+      "address": "Latakia University – Latakia, Syria",
+      "description": "Major: Software Engineering.",
+      "extra": "Gained strong skills in programming, system analysis and design, databases, teamwork, and problem-solving."
+    },
+    {
+      "date": "August 2024 - Present",
+      "title": "Master’s Degree of Web Science",
+      "address": "Syrian Virtual University – Syria",
+      "description": "Currently pursuing a Master’s Degree in Web Science. The program focuses on modern web technologies, enhancing both my academic knowledge and practical skills in web development and information analysis."
+    },
+    {
+      "title": "Languages",
+      "lines": ["Arabic: Native Proficiency.", "English: Intermediate."]
+    }
+  ]
+}

@@ -1,48 +1,12 @@
-import { AnimatedSection } from '../../assets/animation/animation';
-import '../4-education/eduction.css';
-
-const experiences = [
-  {
-    company: 'ITQAN',
-    role: 'Front-End Developer',
-    location: 'Saudi Arabia (Remote)',
-    date: 'Jan 2025 - Present',
-    points: [
-      'Developed scalable ERPs, dashboards, and web apps using React, Next.js, TypeScript, Tailwind, MUI, and shadcn/ui.',
-      'Designed reusable UI components and customized dashboard templates to accelerate development.',
-      'Integrated REST APIs, auth, RBAC, Pusher real-time chat/notifications, and Stripe payments.',
-      'Built multilingual (i18n), multi-currency applications with responsive, cross-browser UIs.',
-      'Boosted performance via code splitting, lazy loading, optimization, and state management.',
-      'Deployed Next.js/React apps on cPanel and collaborated with Agile teams for high-quality delivery.',
-    ],
-  },
-  {
-    company: 'View Programming Company',
-    role: 'Front-End Developer',
-    location: 'Syria (Remote)',
-    date: 'Mar 2023 - Dec 2024',
-    points: [
-      'Developed responsive e-commerce sites and web apps using React, Next.js, TypeScript, and Tailwind CSS.',
-      'Built key e-commerce features: product catalogs, search, filtering, cart, auth, and secure checkout.',
-      'Integrated REST APIs, payment gateways, and Firebase real-time notifications to enhance UX.',
-      'Optimized performance using reusable components, code splitting, lazy loading, and Redux Toolkit.',
-      'Collaborated with designers and backend developers in Agile teams to deliver quality web apps.',
-    ],
-  },
-  {
-    company: 'Freelance',
-    role: 'Front-End Developer',
-    location: 'Remote',
-    date: 'Jan 2022 - Mar 2023',
-    points: [
-      'Delivered 10+ responsive web applications using React.js, Next.js, TypeScript, and Tailwind CSS.',
-      'Collaborated directly with clients to translate business requirements into scalable frontend solutions.',
-      'Integrated RESTful APIs and optimized performance to ensure cross-browser compatibility.',
-    ],
-  },
-];
+import { useTranslation } from "react-i18next";
+import { AnimatedSection } from "../../assets/animation/animation";
+import "../4-education/eduction.css";
 
 export default function Experience() {
+  const { t } = useTranslation("experience");
+  const items = t("items", { returnObjects: true });
+  const experiences = Array.isArray(items) ? items : [];
+
   return (
     <AnimatedSection>
       <div className="boxes-container single">

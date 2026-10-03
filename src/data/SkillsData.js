@@ -1,68 +1,33 @@
 export const mySkills = [
   // Primary
-
   {
     id: "1",
-    name: "React",
-    value: "90",
+    name: "Next",
+    value: "95",
     isPrimary: true,
   },
   {
     id: "2",
-    name: "Next",
-    value: "85",
+    name: "React",
+    value: "90",
     isPrimary: true,
   },
+
   {
     id: "3",
     name: "JavaScript",
-    value: "90",
+    value: "95",
     isPrimary: true,
   },
   {
     id: "4",
     name: "TypeScript",
-    value: "85",
+    value: "80",
     isPrimary: true,
   },
 
   //   Not Primary
 
-  {
-    name: "HTML5",
-    value: "95",
-    isPrimary: false,
-  },
-  {
-    name: "CSS3",
-    value: "90",
-    isPrimary: false,
-  },
-  {
-    name: "Tailwind CSS",
-    value: "90",
-    isPrimary: false,
-  },
-  {
-    name: "MUI",
-    value: "85",
-    isPrimary: false,
-  },
-  {
-    name: "shadcn/ui",
-    value: "85",
-    isPrimary: false,
-  },
-  {
-    name: "Bootstrap",
-    value: "80",
-    isPrimary: false,
-  },
-  {
-    name: "SASS",
-    value: "80",
-    isPrimary: false,
-  },
   {
     name: "Redux Toolkit",
     value: "85",
@@ -75,6 +40,11 @@ export const mySkills = [
   },
   {
     name: "Context API",
+    value: "85",
+    isPrimary: false,
+  },
+  {
+    name: "SEO",
     value: "85",
     isPrimary: false,
   },
@@ -124,6 +94,42 @@ export const mySkills = [
     isPrimary: false,
   },
   {
+    name: "HTML5",
+    value: "95",
+    isPrimary: false,
+  },
+  {
+    name: "CSS3",
+    value: "90",
+    isPrimary: false,
+  },
+  {
+    name: "Tailwind CSS",
+    value: "90",
+    isPrimary: false,
+  },
+  {
+    name: "MUI",
+    value: "85",
+    isPrimary: false,
+  },
+  {
+    name: "shadcn/ui",
+    value: "85",
+    isPrimary: false,
+  },
+  {
+    name: "Bootstrap",
+    value: "80",
+    isPrimary: false,
+  },
+  {
+    name: "SASS",
+    value: "80",
+    isPrimary: false,
+  },
+
+  {
     name: "GitHub",
     value: "85",
     isPrimary: false,
@@ -158,11 +164,7 @@ export const mySkills = [
     value: "80",
     isPrimary: false,
   },
-  {
-    name: "SEO",
-    value: "75",
-    isPrimary: false,
-  },
+
   {
     name: "Agile / Scrum",
     value: "80",
