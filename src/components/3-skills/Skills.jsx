@@ -16,7 +16,7 @@ export default function Skills() {
           setVisible(true);
         }
       },
-      { threshold: 0.3 },
+      { threshold: 0.08 },
     );
     if (node) {
       observer.observe(ref.current);

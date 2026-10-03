@@ -1,6 +1,6 @@
 .contact h1 .icon-envelope {
   color: var(--subtitle-color);
-  margin-right: 2rem;
+  margin-inline-end: 2rem;
   font-size: 1.8rem;
 }
 
@@ -67,7 +67,7 @@
 .contact form input,
 .contact form textarea {
   all: unset;
-  margin-left: 1rem;
+  margin-inline-start: 1rem;
   width: 18rem;
   outline: none;
   border: 1px solid rgb(63 63 70);
@@ -183,7 +183,7 @@
 
   .contact form input,
   .contact form textarea {
-    margin-left: 0;
+    margin-inline-start: 0;
     width: 100%;
     padding: 0.75rem 1rem;
   }
