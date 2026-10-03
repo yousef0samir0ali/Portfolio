@@ -6,6 +6,7 @@ import Footer from "./components/7-footer/Footer";
 import HeadingTitle from "./components/heading-title/HeadingTitle";
 import Skills from "./components/3-skills/Skills";
 import Education from "./components/4-education/Education";
+import Experience from "./components/4-experience/Experience";
 import ToUp from "./components/to-up/ToUp";
 import "./assets/icomoon/style.css";
 
@@ -17,8 +18,11 @@ function App() {
       <div className="divider" />
       <HeadingTitle title="Skills" id="skills" />
       <Skills />
+      <div className="divider" id="experience" />
+      <HeadingTitle title="Experience" />
+      <Experience />
       <div className="divider" id="education" />
-      <HeadingTitle title="Education && Experience" />
+      <HeadingTitle title="Education" />
       <Education />
       <div className="divider" id="projects" />
       <HeadingTitle title="My Projects" />

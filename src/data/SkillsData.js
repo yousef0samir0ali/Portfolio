@@ -4,13 +4,13 @@ export const mySkills = [
   {
     id: "1",
     name: "React",
-    value: "85",
+    value: "90",
     isPrimary: true,
   },
   {
     id: "2",
     name: "Next",
-    value: "80",
+    value: "85",
     isPrimary: true,
   },
   {
@@ -22,7 +22,7 @@ export const mySkills = [
   {
     id: "4",
     name: "TypeScript",
-    value: "75",
+    value: "85",
     isPrimary: true,
   },
 
@@ -30,11 +30,26 @@ export const mySkills = [
 
   {
     name: "HTML5",
-    value: "90",
+    value: "95",
     isPrimary: false,
   },
   {
     name: "CSS3",
+    value: "90",
+    isPrimary: false,
+  },
+  {
+    name: "Tailwind CSS",
+    value: "90",
+    isPrimary: false,
+  },
+  {
+    name: "MUI",
+    value: "85",
+    isPrimary: false,
+  },
+  {
+    name: "shadcn/ui",
     value: "85",
     isPrimary: false,
   },
@@ -44,22 +59,17 @@ export const mySkills = [
     isPrimary: false,
   },
   {
-    name: "Tailwind CSS",
+    name: "SASS",
+    value: "80",
+    isPrimary: false,
+  },
+  {
+    name: "Redux Toolkit",
     value: "85",
     isPrimary: false,
   },
   {
-    name: "SASS",
-    value: "75",
-    isPrimary: false,
-  },
-  {
-    name: "Vite",
-    value: "90",
-    isPrimary: false,
-  },
-  {
-    name: "Redux",
+    name: "React Query",
     value: "80",
     isPrimary: false,
   },
@@ -69,23 +79,13 @@ export const mySkills = [
     isPrimary: false,
   },
   {
-    name: "Git",
-    value: "85",
-    isPrimary: false,
-  },
-  {
-    name: "Problem Solving",
-    value: "85",
-    isPrimary: false,
-  },
-  {
-    name: "GitLab",
-    value: "75",
+    name: "SSR / SSG / ISR",
+    value: "80",
     isPrimary: false,
   },
   {
     name: "RESTful APIs",
-    value: "80",
+    value: "90",
     isPrimary: false,
   },
   {
@@ -94,18 +94,93 @@ export const mySkills = [
     isPrimary: false,
   },
   {
-    name: "Express.js",
-    value: "60",
+    name: "Auth & RBAC",
+    value: "85",
     isPrimary: false,
   },
   {
-    name: "MongoDB",
-    value: "65",
+    name: "i18n",
+    value: "85",
+    isPrimary: false,
+  },
+  {
+    name: "Stripe",
+    value: "75",
+    isPrimary: false,
+  },
+  {
+    name: "Firebase",
+    value: "75",
+    isPrimary: false,
+  },
+  {
+    name: "Pusher",
+    value: "75",
+    isPrimary: false,
+  },
+  {
+    name: "Git",
+    value: "85",
+    isPrimary: false,
+  },
+  {
+    name: "GitHub",
+    value: "85",
+    isPrimary: false,
+  },
+  {
+    name: "GitLab",
+    value: "80",
+    isPrimary: false,
+  },
+  {
+    name: "Vite",
+    value: "90",
+    isPrimary: false,
+  },
+  {
+    name: "Webpack",
+    value: "70",
+    isPrimary: false,
+  },
+  {
+    name: "npm",
+    value: "85",
+    isPrimary: false,
+  },
+  {
+    name: "cPanel",
+    value: "80",
+    isPrimary: false,
+  },
+  {
+    name: "Netlify",
+    value: "80",
+    isPrimary: false,
+  },
+  {
+    name: "SEO",
+    value: "75",
+    isPrimary: false,
+  },
+  {
+    name: "Agile / Scrum",
+    value: "80",
     isPrimary: false,
   },
   {
     name: "Node.js",
     value: "70",
+    isPrimary: false,
+  },
+  {
+    name: "Express.js",
+    value: "65",
+    isPrimary: false,
+  },
+  {
+    name: "MongoDB",
+    value: "65",
     isPrimary: false,
   },
 ];

@@ -30,10 +30,10 @@ export default function Contact() {
           >
             <span className="icon-location flex"></span>
             <h3>Address</h3>
-            <div className="info-sub-desc">Syria - Tartous</div>
+            <div className="info-sub-desc">Tartous, Syria</div>
           </a>
           <a
-            href="mailto: yosf.samir.ali@gmail.com"
+            href="mailto:yosf.samir.ali@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="info-sub flex"
@@ -42,7 +42,7 @@ export default function Contact() {
             <h3>Email</h3>
             <div className="info-sub-desc">yosf.samir.ali@gmail.com</div>
           </a>
-          <a href="tel:+963 997 705 460" target="_blank" rel="noopener noreferrer" className="info-sub flex">
+          <a href="tel:+963997705460" target="_blank" rel="noopener noreferrer" className="info-sub flex">
             <span className="icon-phone flex"></span>
             <h3>Phone</h3>
             <div className="info-sub-desc">+963 997 705 460</div>

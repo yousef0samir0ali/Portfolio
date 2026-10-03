@@ -11,10 +11,10 @@ export default function Footer() {
           <a href="#skills">Skills</a>
         </li>
         <li>
-          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
         </li>
         <li>
-          <a href="#education">Experience</a>
+          <a href="#education">Education</a>
         </li>
         <li>
           <a href="#projects">Projects</a>
@@ -24,7 +24,7 @@ export default function Footer() {
         </li>
       </ul>
       <p>
-        Designed and developed by <span>Eng.Yousef Ali</span> &copy; 2023
+        Designed and developed by <span>Eng.Yousef Ali</span> &copy; {new Date().getFullYear()}
       </p>
     </footer>
   );
